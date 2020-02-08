@@ -1,8 +1,10 @@
-#+TITLE: hebrew-mode: Sane Hebrew defaults in emacs
+#+TITLE: hebrew-mode: Sane Hebrew defaults in Emacs
 #+DATE: February 9, 2020
 
 This minor mode provides easy configuration of Hebrew, with saner defaults and
 optional spell checking.
+
+Usage: ~M-x hebrew-mode <RET>~
 
 Note that buffers with ~hebrew-mode~ enabled in them don't have to be /all/ Hebrew.
 
