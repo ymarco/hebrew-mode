@@ -8,5 +8,5 @@ Usage: ~M-x hebrew-mode <RET>~
 
 Note that buffers with ~hebrew-mode~ enabled in them don't have to be /all/ Hebrew.
 
-All of the variables and functions have a ~hebrew-~ prefix; you can read search
-for them and read the docs straight inside Emacs.
+All of the variables and functions have a ~hebrew-~ prefix; you can search for
+them and read the docs straight inside Emacs.
