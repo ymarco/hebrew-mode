@@ -53,15 +53,15 @@ just add convenient stuff for using Hebrew.
 
 Use the normal `toggle-input-method' (on C-\\ by default) to
 toggle English and Hebrew."
-
   :keymap hebrew-map
-
+  :lighter "Hebrew"
   (cond
    ((eq hebrew-use-hebrew-spell-checking 'unset)
     (message "Hebrew spell checking behavior is unset.
 Please look at the `hebrew-use-hebrew-spell-checking' variable"))
    (hebrew-use-hebrew-spell-checking
     (ispell-change-dictionary "hebrew"))) ;; set hebrew dictionary
+  (set-fontset-font t 'hebrew (font-spec :family hebrew-hebrew-font-family))
 
   (setq bidi-paragraph-direction nil    ;; do treat Hebrew as right-to-left
         display-line-numbers nil        ;; line numbers on both sides annoy me, too much wasted screen estate
