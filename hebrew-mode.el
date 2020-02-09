@@ -67,12 +67,10 @@ Please look at the `hebrew-use-hebrew-spell-checking' variable"))
         display-line-numbers nil        ;; line numbers on both sides annoy me, too much wasted screen estate
         default-input-method "hebrew")) ;; dont ask me what language every time
 
-;;;###autoload
 (defun hebrew-set-hebrew-input-method ()
   "Do hebrew now."
   (activate-input-method "hebrew"))
 
-;;;###autoload
 (defun hebrew-set-regular-input-method ()
   "Return to the normal input method, which is English most of the time."
   (deactivate-input-method))
