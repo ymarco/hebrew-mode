@@ -1,4 +1,4 @@
-#+TITLE: hebrew-mode: Sane Hebrew defaults in Emacs
+#+TITLE: hebrew-mode: saner defaults for Hebrew in Emacs
 #+DATE: February 9, 2020
 
 This minor mode provides easy configuration of Hebrew, with saner defaults and
