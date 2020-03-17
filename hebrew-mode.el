@@ -33,7 +33,7 @@ aspell package, set it to t.")
 (defvar hebrew-hebrew-font-family "DejaVu Sans"
   "The font family to use for Hebrew.
 
-If you set this, make sure to do so before `hebrew-mode' is enabled.
+If you set this, make sure to do so before `hebrew-mode' is loaded.
 
 The default value, \"DejaVu Sans\", is supposed to look ok, but I
 provide this variable in case DejaVu Sans doesn't exist for you.
@@ -54,11 +54,11 @@ just add convenient stuff for using Hebrew.
 Use the normal `toggle-input-method' (on C-\\ by default) to
 toggle English and Hebrew."
   :keymap hebrew-map
-  :lighter "Hebrew"
+
   (cond
    ((eq hebrew-use-hebrew-spell-checking 'unset)
     (message "Hebrew spell checking behavior is unset.
-Please look at the `hebrew-use-hebrew-spell-checking' variable"))
+Please check `hebrew-use-hebrew-spell-checking''s documentation"))
    (hebrew-use-hebrew-spell-checking
     (ispell-change-dictionary "hebrew"))) ;; set hebrew dictionary
   (set-fontset-font t 'hebrew (font-spec :family hebrew-hebrew-font-family))
