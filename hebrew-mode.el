@@ -63,7 +63,7 @@ toggle English and Hebrew."
     (message "Hebrew spell checking behavior is unset.
 Please check `hebrew-use-hebrew-spell-checking''s documentation"))
    (hebrew-use-hebrew-spell-checking
-    (ispell-change-dictionary "hebrew"))) ;; set hebrew dictionary
+    (ispell-change-dictionary "hebrew")))
 
   (setq bidi-paragraph-direction nil    ;; do treat Hebrew as right-to-left
         display-line-numbers nil        ;; line numbers on both sides annoy me, too much wasted screen estate
