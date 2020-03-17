@@ -44,6 +44,9 @@ you like bible looks?")
 (defvar hebrew-map (make-sparse-keymap)
   "Keymap for `hebrew-mode'.")
 
+;; set hebrew dictionary
+(set-fontset-font t 'hebrew (font-spec :family hebrew-hebrew-font-family))
+
 ;;;###autoload
 (define-minor-mode hebrew-mode
   "Minor mode for using Hebrew.
@@ -61,7 +64,6 @@ toggle English and Hebrew."
 Please check `hebrew-use-hebrew-spell-checking''s documentation"))
    (hebrew-use-hebrew-spell-checking
     (ispell-change-dictionary "hebrew"))) ;; set hebrew dictionary
-  (set-fontset-font t 'hebrew (font-spec :family hebrew-hebrew-font-family))
 
   (setq bidi-paragraph-direction nil    ;; do treat Hebrew as right-to-left
         display-line-numbers nil        ;; line numbers on both sides annoy me, too much wasted screen estate
