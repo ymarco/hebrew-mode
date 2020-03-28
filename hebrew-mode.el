@@ -15,7 +15,11 @@
 ;;
 ;;; Commentary:
 ;;
-;;  Set basic Hebrew stuff for buffers using Hebrew
+;;  Set basic Hebrew stuff for buffers using Hebrew:
+;;  - Font
+;;  - BiDi paragraphs
+;;  - Input method
+;;  - Spell checking
 ;;
 ;;; Code:
 
@@ -35,8 +39,9 @@ aspell package, set it to t.")
 
 If you set this, make sure to do so before `hebrew-mode' is loaded.
 
-The default value, \"DejaVu Sans\", is supposed to look ok, but I
-provide this variable in case DejaVu Sans doesn't exist for you.
+The default value, \"DejaVu Sans\", is supposed to look ok, but
+this variable is provided in case DejaVu Sans doesn't exist for
+you, or you want other fonts.
 
 Set this to nil If you wanna let Emacs handle the Hebrew font. Do
 you like bible looks?")
@@ -67,7 +72,7 @@ Please check `hebrew-use-hebrew-spell-checking''s documentation"))
 
   (setq bidi-paragraph-direction nil    ; Do treat Hebrew as right-to-left
         bidi-paragraph-separate-re "^"  ; No need for empty lines to switch alignment
-        bidi-paragraph-start-re "^"     ; ...
+        bidi-paragraph-start-re "^"     ; ^
         display-line-numbers nil        ; Line numbers on both sides annoy me, too much wasted screen estate
         default-input-method "hebrew")) ; Don't ask me what language every time
 
