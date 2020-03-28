@@ -1,7 +1,7 @@
 #+TITLE: hebrew-mode: saner Hebrew defaults for Emacs
 #+DATE: February 9, 2020
 
-This minor mode sets basic Hebrew stuff for buffers using Hebrew:
+This tiny minor mode sets basic Hebrew stuff for buffers using Hebrew:
  - Font
  - BiDi paragraphs
  - Input method
@@ -9,9 +9,9 @@ This minor mode sets basic Hebrew stuff for buffers using Hebrew:
 
 
 *Usage:* ~M-x hebrew-mode~. This doesn't set the Hebrew input method immediately,
-you should do that when you want with ~toggle-input-method~, (defaultly bound by
+you should do that when you want with ~toggle-input-method~ (defaultly bound by
 Emacs to ~C-\~). Explicitly set input methods with
 ~hebrew-set-hebrew-input-method~ or ~hebrew-set-regular-input-method~.
 
 Buffers with ~hebrew-mode~ enabled in them don't have to be /all/ Hebrew, this mode
-just sets nicer things for Hebrew.
+just sets nicer things for it.
