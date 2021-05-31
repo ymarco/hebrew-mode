@@ -63,21 +63,26 @@ Use the normal `toggle-input-method' (on C-\\ by default) to
 toggle English and Hebrew."
   :keymap hebrew-map
 
-  (cond
-   ((eq hebrew-use-hebrew-spell-checking 'unset)
-    (message "Hebrew spell checking behavior is unset.
+  (if hebrew-mode
+      (progn
+        (cond
+         ((eq hebrew-use-hebrew-spell-checking 'unset)
+          (message "Hebrew spell checking behavior is unset.
 Please check `hebrew-use-hebrew-spell-checking''s documentation"))
-   (hebrew-use-hebrew-spell-checking
-    (ispell-change-dictionary "hebrew")))
+         (hebrew-use-hebrew-spell-checking
+          (ispell-change-dictionary "hebrew")))
 
-  (setq bidi-paragraph-direction nil    ; Do treat Hebrew as right-to-left
-        bidi-paragraph-separate-re "^"  ; No need for empty lines to switch alignment
-        bidi-paragraph-start-re "^"     ; ^
-        display-line-numbers nil        ; Line numbers on both sides annoy me, too much wasted screen estate
-        default-input-method "hebrew")) ; Don't ask me what language every time
+        (setq bidi-paragraph-direction nil ; Do treat Hebrew as right-to-left
+              bidi-paragraph-separate-re "^" ; No need for empty lines to switch alignment
+              bidi-paragraph-start-re "^"    ; ^
+              display-line-numbers nil ; Line numbers on both sides annoy me, too much wasted screen estate
+              default-input-method "hebrew")) ; Don't ask me what language every time
+    (ispell-change-dictionary "default")
+    (setq bidi-paragraph-direction 'left-to-right
+          bidi-paragraph-separate-re nil)))
 
 (defun hebrew-set-hebrew-input-method ()
-  "Do hebrew now."
+  "Do Hebrew now."
   (activate-input-method "hebrew"))
 
 (defun hebrew-set-regular-input-method ()
