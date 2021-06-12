@@ -77,7 +77,9 @@ Please check `hebrew-use-hebrew-spell-checking''s documentation"))
               bidi-paragraph-start-re "^"    ; ^
               display-line-numbers nil ; Line numbers on both sides annoy me, too much wasted screen estate
               default-input-method "hebrew")) ; Don't ask me what language every time
-    (ispell-change-dictionary "default")
+    (when (and hebrew-use-hebrew-spell-checking
+               (not (eq hebrew-use-hebrew-spell-checking 'unset)))
+      (ispell-change-dictionary "default"))
     (setq bidi-paragraph-direction 'left-to-right
           bidi-paragraph-separate-re nil)))
 
